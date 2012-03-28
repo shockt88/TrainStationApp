@@ -1,0 +1,13 @@
+
+<h1>Stations#index</h1>
+<p>Find me in app/views/stations/index.html.erb</p>
+
+<% @all_stations.each do |the_station| %>
+  <p>
+    <%= link_to the_station.name, station_url(the_station.id) %>
+
+    <%= link_to "Delete", station_url(the_station.id),
+            :method => :delete %>
+  </p>
+<% end %>
+
